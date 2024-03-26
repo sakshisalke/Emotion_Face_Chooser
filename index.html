@@ -51,17 +51,44 @@
     <h1 class="head-title">Emotion-face-chooser</h1>
 
     <div class="card">
-        <img src="./img/happy1.gif" alt="happy">
+        <img src="./img/happy.gif" alt="happy" id="emotion-img" />
 
 
         <div class="btn-container">
-            <button class="btn">Happy</button>
-            <button class="btn">Sad</button>
-            <button class="btn">Angle</button>
-            <button class="btn">Love</button>
-            <button class="btn">Angry</button>
+            <button class="btn" id="happy" onclick="changeEmotion(happy)">Happy</button>
+            <button class="btn" id="sad" onclick="changeEmotion(sad)">Sad</button>
+            <button class="btn" id="angle" onclick="changeEmotion(angle)">Angle</button>
+            <button class="btn" id="love" onclick="changeEmotion(love)">Love</button>
+            <button class="btn" id="angry" onclick="changeEmotion(angry)">Angry</button>
         </div>
     </div>
+
+    <script>
+        function changeEmotion(state){
+            const emotion= document.getElementById('emotion-img');
+            if(state==happy){
+                emotion.src= './img/happy.gif';
+            }
+
+            else if(state==sad){
+                emotion.src= './img/sad.gif';
+            }
+
+            else if(state==angle){
+                emotion.src= './img/angle.gif';
+            }
+
+            else if(state==love){
+                emotion.src= './img/love.gif';
+            }
+
+            else if(state==angry){
+                emotion.src= './img/angry.gif';
+            }
+            
+        }
+    
+    </script>
 
 </body>
 
